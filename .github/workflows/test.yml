@@ -25,6 +25,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
+          # libdmtx0t64 is the renamed package in Ubuntu 24.04+ (previously libdmtx0a)
           sudo apt-get install -y libdmtx0t64
 
       - name: Install macOS dependencies

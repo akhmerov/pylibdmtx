@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pylibdmtx"
-version = "0.1.11"
-description = "Read and write Data Matrix barcodes from Python 2 and 3."
+dynamic = ["version"]
+description = "Read and write Data Matrix barcodes."
 readme = "README.rst"
 license = {text = "MIT"}
 authors = [
@@ -34,6 +34,9 @@ scripts = [
 [project.scripts]
 read_datamatrix = "pylibdmtx.scripts.read_datamatrix:main"
 write_datamatrix = "pylibdmtx.scripts.write_datamatrix:main"
+
+[tool.hatch.version]
+path = "pylibdmtx/__init__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
