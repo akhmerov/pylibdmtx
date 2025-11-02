@@ -7,15 +7,15 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
         include:
           - os: macos-latest
-            python-version: "3.14"
+            python-version: "3.13"
           - os: windows-latest
-            python-version: "3.14"
+            python-version: "3.13"
             architecture: 'x86'
           - os: windows-latest
-            python-version: "3.14"
+            python-version: "3.13"
             architecture: 'x64'
 
     runs-on: ${{ matrix.os }}
@@ -66,7 +66,7 @@ jobs:
         run: pytest --verbose --cov=pylibdmtx pylibdmtx
 
       - name: Upload coverage
-        if: ${{ matrix.python-version == '3.14' && runner.os == 'Linux' }}
+        if: ${{ matrix.python-version == '3.13' && runner.os == 'Linux' }}
         run: |
           pip install coveralls>=3.2.0
           coveralls --service=github
