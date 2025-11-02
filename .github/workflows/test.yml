@@ -33,6 +33,8 @@ jobs:
         run: |
           brew update
           brew install libdmtx
+          # Add Homebrew library path to DYLD_LIBRARY_PATH for ctypes to find libdmtx
+          echo "DYLD_LIBRARY_PATH=$(brew --prefix)/lib:$DYLD_LIBRARY_PATH" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
