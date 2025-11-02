@@ -20,7 +20,7 @@ Read and write Data Matrix barcodes from Python 2 and 3 using the
 -  Works with PIL / Pillow images, OpenCV / imageio / numpy ``ndarray``\ s, and raw bytes
 -  Decodes locations of barcodes
 -  No dependencies, other than the libdmtx library itself
--  Tested on Python 2.7, and Python 3.5 to 3.10
+-  Tested on Python 3.10 to 3.14
 
 The older
 `pydmtx <https://sourceforge.net/p/libdmtx/dmtx-wrappers/ci/master/tree/python/>`__
@@ -43,7 +43,7 @@ Linux:
 
 ::
 
-   sudo apt-get install libdmtx0a
+   sudo apt-get install libdmtx0t64
 
 The PyPI package is currently out-of-date; to install the latest version, use:
 
